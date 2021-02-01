@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+section {
+    min-height: 100%;
+    margin-bottom: 0;
+}
+#Chart {
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+H2 {
+    margin: 30px;
+}
+.chart {
+    width:600px;height:300px
+}
+
+.selector {
+    margin: 20px;
+}

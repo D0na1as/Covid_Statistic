@@ -9,15 +9,25 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/style.css}">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script th:src="@{/script.js}"></script>
     <title>Covid Impact by Country</title>
 </head>
 <body>
 <section class="jumbotron text-center">
     <div class="container">
-        <select class="form-select" id="Dropdown" aria-label="Default select example">
+        <H2>Impact of Covid-19</H2>
+        <div id="Chart" class="chart">
+        </div>
+        <div class="selector">
+            <p>Choose country:</p>
+        <select id="Dropdown">
         </select>
+        </div>
+    </div>
 </section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://static.pureexample.com/js/flot/excanvas.min.js"></script>
+<script src="http://static.pureexample.com/js/flot/jquery.flot.min.js"></script>
+<script th:src="@{/js/flot.axislabels.js}"></script>
+<script th:src="@{/js/script.js}"></script>
 </body>
 </html>

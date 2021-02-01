@@ -3,6 +3,7 @@ package by.country.covid.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+//Object for own API
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Data {
 

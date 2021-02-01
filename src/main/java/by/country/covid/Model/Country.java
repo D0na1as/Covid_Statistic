@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+//Model for external API
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Country {
@@ -17,7 +18,7 @@ public class Country {
     @JsonProperty("cases")
     private Map<String, Integer> cases;
     //Key is day, cases value
-    @JsonProperty("death")
+    @JsonProperty("deaths")
     private Map<String, Integer> deaths;
 
     public Country() {

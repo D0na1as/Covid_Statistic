@@ -1,7 +1,9 @@
+
 plugins {
 	id 'org.springframework.boot' version '2.4.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'by.country'
@@ -18,3 +20,10 @@ dependencies {
 	compile group: 'org.json', name: 'json', version: '20201115'
 }
 
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'by.country.covid.CovidStatisticsApplication'
+		)
+	}
+}

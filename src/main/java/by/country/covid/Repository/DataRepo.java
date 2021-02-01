@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,6 +21,8 @@ public class DataRepo {
     private  String dataUrl;
 
     //Getting data from API and extracting desirable data
+    //Annotation is for enabling cache function in Spring
+    @Cacheable("list")
     public List<Data> getList() throws JSONException, JsonProcessingException {
 
         RestTemplate restTemplate = new RestTemplate();

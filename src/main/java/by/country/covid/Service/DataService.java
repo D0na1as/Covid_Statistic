@@ -5,7 +5,6 @@ import by.country.covid.Model.Data;
 import by.country.covid.Repository.DataRepo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.text.Collator;
@@ -20,8 +19,7 @@ public class DataService {
     @Autowired
     DataRepo dataRepo;
 
-    //Get all date from public endpoint
-    @Cacheable("list")
+    //Get all data from public endpoint
     public Map<String, Country> getList() throws JsonProcessingException {
 
         Map<String, Country> map = new HashMap<>();
@@ -51,11 +49,11 @@ public class DataService {
     }
 
     //Return desired country statistic of cases and deaths by date
-
     public Country getStatistic (String country) throws JsonProcessingException {
         return getList().get(country);
     }
 
+    //Fetches list of available countries and places having data
     public List<String> getPlaces() throws JsonProcessingException {
         List<String> keys = new ArrayList<>(getList().keySet());
         keys.sort(Collator.getInstance());
