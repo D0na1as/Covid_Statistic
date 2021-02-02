@@ -3,10 +3,14 @@ url: https://checkcovid.herokuapp.com/
 
 REST API:
 
-/statistic/{Country} - returns json with cases and deaths. Bouth contains: (date) : value
+/statistic/{Country} - returns json with cases and deaths. 
+
+Both contains: (date) : value
+
 /statistic/places - returns all countries and places which statistic is tracking
 
 FRONT-END 
+
 / - returns page which reflects API's information
 
 Steps to deploy to Heroku:
