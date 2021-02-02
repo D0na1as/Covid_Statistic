@@ -12,10 +12,9 @@ FRONT-END
 Steps to deploy to Heroku:
 
 heroku container:push web --app {app_name}
+
 heroku container:release web --app {app_name}
 
 Ready to use!
-
-Steps to run localy:
-
-Open and press run :) !
+  Using Intellij:
+  Run main class in src->main->java->bycountry.covid->CovidStatisticsApplication
