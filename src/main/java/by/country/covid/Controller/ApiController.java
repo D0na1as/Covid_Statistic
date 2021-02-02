@@ -23,6 +23,7 @@ public class ApiController {
     //Get list
     @RequestMapping (value = "/{country}", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getStatistic(@PathVariable("country") String country ) throws JsonProcessingException {
+        country = country.replace("+", "/");
         Country data = service.getStatistic(country);
         if (data!=null) {
             return ResponseEntity.ok(data);

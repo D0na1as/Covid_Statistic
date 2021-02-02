@@ -29,6 +29,7 @@ function loadDropdown() {
 
 //Gets data from API and draws chart
 function getData(country) {
+    country = country.replace("/", "+")
     $.ajax({
        type: "GET",
        url: "/statistic/"+country,
