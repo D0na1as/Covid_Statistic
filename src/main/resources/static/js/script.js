@@ -104,7 +104,9 @@ function plotChart(cases, deaths) {
             yaxes: [
                 {
                     /* First y axis */
-                   min: 0,
+                    min: 0,
+                    minTickSize: 1,
+                    tickDecimals: 0,
                    position: "left",
                    color: "black",
                    axisLabel: "Cases/week",
