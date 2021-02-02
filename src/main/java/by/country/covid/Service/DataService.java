@@ -25,7 +25,7 @@ public class DataService {
         Map<String, Country> map = new HashMap<>();
 
         for (Data data : dataRepo.getList()) {
-
+            data.setCountry(data.getCountry().replace("/", " "));
             if (map.get(data.getCountry())==null) {
                 Country country = new Country();
                 if (data.getIndicator().equals("cases")) {
